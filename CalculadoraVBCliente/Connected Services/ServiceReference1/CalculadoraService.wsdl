@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="suma">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="n1" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="n2" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sumaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sumaResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Resta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="n1" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="n2" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RestaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RestaResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="n" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="facResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="facResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="div">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="n1" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="n2" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="divResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="divResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Multiplicacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="n1" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="n2" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MultiplicacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MultiplicacionResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Potencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Base" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Exponente" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PotenciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PotenciaResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RaizCuadrada">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Radicando" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="indice" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RaizCuadradaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RaizCuadradaResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Inverso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="n1" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InversoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InversoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Seno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="n1" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SenoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SenoResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Coseno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="n1" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CosenoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CosenoResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tangente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="n1" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TangenteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TangenteResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="sumaSoapIn">
+    <wsdl:part name="parameters" element="tns:suma" />
+  </wsdl:message>
+  <wsdl:message name="sumaSoapOut">
+    <wsdl:part name="parameters" element="tns:sumaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RestaSoapIn">
+    <wsdl:part name="parameters" element="tns:Resta" />
+  </wsdl:message>
+  <wsdl:message name="RestaSoapOut">
+    <wsdl:part name="parameters" element="tns:RestaResponse" />
+  </wsdl:message>
+  <wsdl:message name="facSoapIn">
+    <wsdl:part name="parameters" element="tns:fac" />
+  </wsdl:message>
+  <wsdl:message name="facSoapOut">
+    <wsdl:part name="parameters" element="tns:facResponse" />
+  </wsdl:message>
+  <wsdl:message name="divSoapIn">
+    <wsdl:part name="parameters" element="tns:div" />
+  </wsdl:message>
+  <wsdl:message name="divSoapOut">
+    <wsdl:part name="parameters" element="tns:divResponse" />
+  </wsdl:message>
+  <wsdl:message name="MultiplicacionSoapIn">
+    <wsdl:part name="parameters" element="tns:Multiplicacion" />
+  </wsdl:message>
+  <wsdl:message name="MultiplicacionSoapOut">
+    <wsdl:part name="parameters" element="tns:MultiplicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="PotenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:Potencia" />
+  </wsdl:message>
+  <wsdl:message name="PotenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:PotenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RaizCuadradaSoapIn">
+    <wsdl:part name="parameters" element="tns:RaizCuadrada" />
+  </wsdl:message>
+  <wsdl:message name="RaizCuadradaSoapOut">
+    <wsdl:part name="parameters" element="tns:RaizCuadradaResponse" />
+  </wsdl:message>
+  <wsdl:message name="InversoSoapIn">
+    <wsdl:part name="parameters" element="tns:Inverso" />
+  </wsdl:message>
+  <wsdl:message name="InversoSoapOut">
+    <wsdl:part name="parameters" element="tns:InversoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SenoSoapIn">
+    <wsdl:part name="parameters" element="tns:Seno" />
+  </wsdl:message>
+  <wsdl:message name="SenoSoapOut">
+    <wsdl:part name="parameters" element="tns:SenoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CosenoSoapIn">
+    <wsdl:part name="parameters" element="tns:Coseno" />
+  </wsdl:message>
+  <wsdl:message name="CosenoSoapOut">
+    <wsdl:part name="parameters" element="tns:CosenoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TangenteSoapIn">
+    <wsdl:part name="parameters" element="tns:Tangente" />
+  </wsdl:message>
+  <wsdl:message name="TangenteSoapOut">
+    <wsdl:part name="parameters" element="tns:TangenteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CalculadoraServiceSoap">
+    <wsdl:operation name="suma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Suma</wsdl:documentation>
+      <wsdl:input message="tns:sumaSoapIn" />
+      <wsdl:output message="tns:sumaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Resta">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Resta</wsdl:documentation>
+      <wsdl:input message="tns:RestaSoapIn" />
+      <wsdl:output message="tns:RestaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fac">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Factorial</wsdl:documentation>
+      <wsdl:input message="tns:facSoapIn" />
+      <wsdl:output message="tns:facSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="div">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">divicion</wsdl:documentation>
+      <wsdl:input message="tns:divSoapIn" />
+      <wsdl:output message="tns:divSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Multiplicacion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Multiplicacion</wsdl:documentation>
+      <wsdl:input message="tns:MultiplicacionSoapIn" />
+      <wsdl:output message="tns:MultiplicacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Potencia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">potencia</wsdl:documentation>
+      <wsdl:input message="tns:PotenciaSoapIn" />
+      <wsdl:output message="tns:PotenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RaizCuadrada">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Raiz Cuadrada</wsdl:documentation>
+      <wsdl:input message="tns:RaizCuadradaSoapIn" />
+      <wsdl:output message="tns:RaizCuadradaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Inverso">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inverso</wsdl:documentation>
+      <wsdl:input message="tns:InversoSoapIn" />
+      <wsdl:output message="tns:InversoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Seno">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Seno</wsdl:documentation>
+      <wsdl:input message="tns:SenoSoapIn" />
+      <wsdl:output message="tns:SenoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Coseno">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Coseno</wsdl:documentation>
+      <wsdl:input message="tns:CosenoSoapIn" />
+      <wsdl:output message="tns:CosenoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Tangente">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Tangente</wsdl:documentation>
+      <wsdl:input message="tns:TangenteSoapIn" />
+      <wsdl:output message="tns:TangenteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CalculadoraServiceSoap" type="tns:CalculadoraServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="suma">
+      <soap:operation soapAction="http://tempuri.org/suma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Resta">
+      <soap:operation soapAction="http://tempuri.org/Resta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fac">
+      <soap:operation soapAction="http://tempuri.org/fac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="div">
+      <soap:operation soapAction="http://tempuri.org/div" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiplicacion">
+      <soap:operation soapAction="http://tempuri.org/Multiplicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Potencia">
+      <soap:operation soapAction="http://tempuri.org/Potencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RaizCuadrada">
+      <soap:operation soapAction="http://tempuri.org/RaizCuadrada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inverso">
+      <soap:operation soapAction="http://tempuri.org/Inverso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seno">
+      <soap:operation soapAction="http://tempuri.org/Seno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Coseno">
+      <soap:operation soapAction="http://tempuri.org/Coseno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tangente">
+      <soap:operation soapAction="http://tempuri.org/Tangente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CalculadoraServiceSoap12" type="tns:CalculadoraServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="suma">
+      <soap12:operation soapAction="http://tempuri.org/suma" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Resta">
+      <soap12:operation soapAction="http://tempuri.org/Resta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fac">
+      <soap12:operation soapAction="http://tempuri.org/fac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="div">
+      <soap12:operation soapAction="http://tempuri.org/div" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiplicacion">
+      <soap12:operation soapAction="http://tempuri.org/Multiplicacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Potencia">
+      <soap12:operation soapAction="http://tempuri.org/Potencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RaizCuadrada">
+      <soap12:operation soapAction="http://tempuri.org/RaizCuadrada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inverso">
+      <soap12:operation soapAction="http://tempuri.org/Inverso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seno">
+      <soap12:operation soapAction="http://tempuri.org/Seno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Coseno">
+      <soap12:operation soapAction="http://tempuri.org/Coseno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tangente">
+      <soap12:operation soapAction="http://tempuri.org/Tangente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CalculadoraService">
+    <wsdl:port name="CalculadoraServiceSoap" binding="tns:CalculadoraServiceSoap">
+      <soap:address location="http://eliminadosmine.somee.com/CalculadoraService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CalculadoraServiceSoap12" binding="tns:CalculadoraServiceSoap12">
+      <soap12:address location="http://eliminadosmine.somee.com/CalculadoraService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,12 @@
+C:\Users\user\source\repos\CalculadoraVBCliente\CalculadoraVBCliente\bin\Debug\CalculadoraVBCliente.exe.config
+C:\Users\user\source\repos\CalculadoraVBCliente\CalculadoraVBCliente\bin\Debug\CalculadoraVBCliente.exe
+C:\Users\user\source\repos\CalculadoraVBCliente\CalculadoraVBCliente\bin\Debug\CalculadoraVBCliente.pdb
+C:\Users\user\source\repos\CalculadoraVBCliente\CalculadoraVBCliente\bin\Debug\CalculadoraVBCliente.xml
+C:\Users\user\source\repos\CalculadoraVBCliente\CalculadoraVBCliente\obj\Debug\CalculadoraVBCliente.vbprojAssemblyReference.cache
+C:\Users\user\source\repos\CalculadoraVBCliente\CalculadoraVBCliente\obj\Debug\CalculadoraVBCliente.Form1.resources
+C:\Users\user\source\repos\CalculadoraVBCliente\CalculadoraVBCliente\obj\Debug\CalculadoraVBCliente.Resources.resources
+C:\Users\user\source\repos\CalculadoraVBCliente\CalculadoraVBCliente\obj\Debug\CalculadoraVBCliente.vbproj.GenerateResource.cache
+C:\Users\user\source\repos\CalculadoraVBCliente\CalculadoraVBCliente\obj\Debug\CalculadoraVBCliente.vbproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\CalculadoraVBCliente\CalculadoraVBCliente\obj\Debug\CalculadoraVBCliente.exe
+C:\Users\user\source\repos\CalculadoraVBCliente\CalculadoraVBCliente\obj\Debug\CalculadoraVBCliente.xml
+C:\Users\user\source\repos\CalculadoraVBCliente\CalculadoraVBCliente\obj\Debug\CalculadoraVBCliente.pdb
